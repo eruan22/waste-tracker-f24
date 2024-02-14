@@ -192,6 +192,18 @@ app.post('/waste-tracker', (req, res) => {
     });
 });
 
+app.get('/recycling-guide', (req, res) => {
+    res.render('register', { success: req.flash('success'), error: req.flash('error') });
+});
+
+app.get('/about-us', (req, res) => {
+    res.render('register', { success: req.flash('success'), error: req.flash('error') });
+});
+
+// app.get('/', (req, res) => {
+//     res.render('register', { success: req.flash('success'), error: req.flash('error') });
+// });
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

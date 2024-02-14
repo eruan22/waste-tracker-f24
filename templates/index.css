@@ -1,11 +1,31 @@
 body {
-    background-color: #DAF7A6 ;
+    background-color: #E9FFE1;
+    margin:0px;
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .Welcome{
     height: 200px;
     background-color: white;
 }
-h1 {
+
+h3 {
     text-align: center;
+}
+
+.navBar {
+    background-color:#A1D88E;
+}
+    
+.navBar h1 {
+    text-align: left;
+    margin: 0px;
+    padding: 20px;
+}
+p {font-size: 30px;
+    border-width: 400px;
 }
