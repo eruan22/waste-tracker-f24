@@ -8,7 +8,7 @@ body {
     font-style: normal;
 }
 
-.Welcome{
+.Welcome {
     height: 200px;
     background-color: white;
 }
@@ -16,7 +16,10 @@ body {
 h3 {
     text-align: center;
 }
-
+.logoPic {
+    width: 100px;
+    height: 100px;
+}
 .navBar {
     background-color:#A1D88E;
 }
@@ -24,8 +27,47 @@ h3 {
 .navBar h1 {
     text-align: left;
     margin: 0px;
-    padding: 20px;
+    padding: 10px;
 }
-p {font-size: 30px;
+p {
+    font-size: 30px;
     border-width: 400px;
+}
+div {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.section {
+    display: flex;
+    justify-content: space-between;
+}
+.left {
+    align-items: left;
+    width: 50%;
+}
+.right {
+    align-items:right;
+    width: 50%;
+}
+.right h1 {
+    font-size: 30px;
+    text-align: center;
+}
+.right h2 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.mainImage {
+    margin: 0px;
+}
+
+#blue {
+    background-color: #82D0C8;
+
+}
+#white{
+    background-color: white;
 }

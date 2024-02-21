@@ -23,17 +23,19 @@
             <%= error[0] %>
         </div>
     <% } %>
+    
+    <div class="greenBox">
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
 
-    <form action="/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-
-        <button type="submit">Login</button>
-    </form>
-
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
     <p>Don't have an account? <a href="/register">Register here</a></p>
 </body>
 

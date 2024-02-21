@@ -50,6 +50,8 @@ app.get('/login', (req, res) => {
     res.render('login', { success: req.flash('success'), error: req.flash('error') });
 });
 
+app.use(express.static("public"));
+
 // Define a route for handling login form submission
 app.post('/login', (req, res) => {
     // Handle login form submission
