@@ -194,12 +194,87 @@ app.post('/waste-tracker', (req, res) => {
     });
 });
 
+// app.get("/progress-timeline", (req, res) => {
+//   // Check if the user is logged in
+//   if (!req.session.user_id) {
+//     req.flash("error", "Please log in to view waste data.");
+//     return res.redirect("/login");
+//   }
+
+//   // Retrieve the user's ID from the session
+//   const userId = req.session.user_id;
+
+//   // Query the waste data associated with the user
+//   const selectWasteDataQuery = `
+//         SELECT * FROM waste_data
+//         WHERE user_id = ?
+//         ORDER BY timestamp DESC
+//     `;
+
+//   db.all(selectWasteDataQuery, [userId], (err, rows) => {
+//     if (err) {
+//       req.flash("error", "Error retrieving waste data.");
+//       return res.redirect("/waste-tracker.html");
+//     }
+
+//     // Pass the retrieved waste data to your template
+//     res.render("waste-tracker.ejs", { wasteData: rows });
+//   });
+// });
+
+// app.post("/waste-tracker", (req, res) => {
+//   if (!req.session.user_id) {
+//     req.flash("error", "Please log in to submit waste data.");
+//     return res.redirect("/login");
+//   }
+
+//   // Retrieve the user's ID from the session
+//   const userId = req.session.user_id;
+
+//   // Extract and validate waste data from the request
+//   const wasteType = req.body.wasteType;
+//   const weight = parseFloat(req.body.weight);
+
+//   // Check if the weight is a valid number and greater than 0
+//   if (isNaN(weight) || weight <= 0) {
+//     req.flash("error", "Invalid weight value.");
+//     return res.redirect("/waste-tracker"); // Redirect back to the waste submission page
+//   }
+
+//   // Insert waste data into the database
+//   const insertWasteDataQuery = `
+//         INSERT INTO waste_data (user_id, waste_type, weight)
+//         VALUES (?, ?, ?)
+//     `;
+
+//   const wasteDataValues = [userId, wasteType, weight];
+
+//   db.run(insertWasteDataQuery, wasteDataValues, function (err) {
+//     if (err) {
+//       req.flash("error", "Error storing waste data.");
+//     } else {
+//       req.flash("success", "Waste data recorded successfully.");
+//     }
+//     res.redirect("/waste-tracker"); // Redirect back to the waste submission page
+//   });
+// });
+
 app.get('/recycling-guide', (req, res) => {
-    res.render('register', { success: req.flash('success'), error: req.flash('error') });
+    res.render("recycling-guide", {
+      success: req.flash("success"),
+      error: req.flash("error"),
+    });
 });
 
 app.get('/about-us', (req, res) => {
-    res.render('register', { success: req.flash('success'), error: req.flash('error') });
+    res.render('about-us', { success: req.flash('success'), error: req.flash('error') });
+});
+
+app.get("/progress-timeline", (req, res) => {
+  res.render("progress-timeline", {
+    success: req.flash("success"),
+    error: req.flash("error"),
+  });
 });
 
 // app.get('/', (req, res) => {

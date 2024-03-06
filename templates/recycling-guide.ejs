@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Recycling Guide</title>
-</head>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<h1>Recycling Guide</h1>
-
-<body>
-
-
+  <body>
     <!-- Display success flash message if available -->
     <% if (success && success.length> 0) { %>
-        <div class="alert alert-success">
-            <%= success[0] %>
-        </div>
-        <% } %>
+    <div class="alert alert-success"><%= success[0] %></div>
+    <% } %>
 
-            <!-- Display error flash message if available -->
-            <% if (error && error.length> 0) { %>
-                <div class="alert alert-danger">
-                    <%= error[0] %>
-                </div>
-                <% } %>
+    <!-- Display error flash message if available -->
+    <% if (error && error.length> 0) { %>
+    <div class="alert alert-danger"><%= error[0] %></div>
+    <% } %>
+    <div class="navBar">
+      <div>
+        <h1>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
+        </h1>
+      </div>
+      <button class="sectionButton"><a href="/login">Log In/Sign Up</a></button>
+      <button class="sectionButton">
+        <a href="/recycling-guide">Recycling Guide</a>
+      </button>
+      <!-- fix this later -->
+      <!-- <label for="dog-names">Features</label> 
+        <select name="Features" id="feat"> 
+            <button><option value="waste">Waste Tracker</option> </button>
+            <option value="progress">Progress Tracker</option> 
+        </select> -->
+      <button class="sectionButton">
+        <a href="/waste-tracker">Waste Tracker</a>
+      </button>
+      <button class="sectionButton">
+        <a href="/progress-timeline">Progress Tracker</a>
+      </button>
+      <button class="sectionButton"><a href="/about-us">About Us</a></button>
+    </div>
+    <h1>Recycling Guide</h1>
+    <b
+      >Make sure to clean and dry all items before putting them in your
+      recycling bin!</b
+    >
 
-</body>
+    <h3>Accepted in curbside recycling bin:</h3>
+    <ul>
+      <li>Plastic bottles & containers</li>
+      <li>Tin, aluminum, & steel cans</li>
+      <li>Paper, newspaper, & magazines</li>
+      <li>Flattened cardboard & paperboard</li>
+    </ul>
 
+    <h3>Accepted in some regions:</h3>
+    <ul>
+      <li>Milk cartons, juice boxes & food cartons</li>
+      <li>Glass</li>
+    </ul>
+
+    <h3>
+      Not accepted in curbside recycling (try reducing and reusing instead):
+    </h3>
+    <ul>
+      <li>Plastic bags (check out plasticfilmrecycling.org for more info)</li>
+      <li>Plastic wrap, bubble wrap, sandwich bags, and freezer bags</li>
+      <li>Chip bags</li>
+      <li>Juice and soup pouches</li>
+      <li>Cups with wax or plastic coating</li>
+      <li>Polystyrene foam, plastic to-go containers, and cups</li>
+    </ul>
+
+    <h3>Check locally for special collection programs:</h3>
+    <ul>
+      <li>Clothing, textiles, shower curtains, mini pools, fencing, furniture</li>
+      <li>Car parts, scrap metal, tires, filters</li>
+    </ul>
+  </body>
 </html>

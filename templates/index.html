@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Waste Reduction and Recycling Tracker</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script src="script.js"></script>
     <!-- replace 3 lines below to change font of website -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="navBar">
-        <div>
-            <h1><img class="logoPic" src="binny.svg"/>RecycleRight</h1>
-        </div>
-        <button><a href="/login">Log In/Sign Up</a></button>
-        <button><a href="/recycling-guide">Recycling Guide</a></button>
-        <!-- fix this later -->
-        <!-- <label for="dog-names">Features</label> 
+      <div>
+        <h1>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
+        </h1>
+      </div>
+      <button class="navBarButton"><a href="/login">Log In/Sign Up</a></button>
+      <button class="navBarButton"><a href="/recycling-guide">Recycling Guide</a></button>
+      <!-- fix this later -->
+      <!-- <label for="dog-names">Features</label> 
         <select name="Features" id="feat"> 
             <button><option value="waste">Waste Tracker</option> </button>
             <option value="progress">Progress Tracker</option> 
         </select> -->
-        <button><a href="/waste-tracker">Waste Tracker</a></button>
-        <button><a href="/progress-timeline">Progress Tracker</a></button>
-        <button><a href="/about-us">About Us</a></button>
+      <button class="navBarButton"><a href="/waste-tracker">Waste Tracker</a></button>
+      <button class="navBarButton"><a href="/progress-timeline">Progress Tracker</a></button>
+      <button class="navBarButton"><a href="/about-us">About Us</a></button>
     </div>
     <div>
-        <h1>Welcome to Recycle Right!</h1>
-        <h3>Remember: Reduce, Reuse, RecycleRight</h3>
+      <h1>Welcome to Recycle Right!</h1>
+      <h3>Remember: Reduce, Reuse, RecycleRight</h3>
     </div>
     <div class="mainImage">
-        <img src = "https://i0.wp.com/diversified-recycling.com/wp-content/uploads/2013/05/New-Recycle-Center-078.jpg?fit=3888%2C2592&ssl=1" 
-        style="width:1440px;height:600px;"/>
+      <img
+        src="https://i0.wp.com/diversified-recycling.com/wp-content/uploads/2013/05/New-Recycle-Center-078.jpg?fit=3888%2C2592&ssl=1"
+        style="width: 1440px; height: 600px"
+      />
     </div>
     <div class="section">
-        <div class="left" id="blue">
-            <h1> Get to Know Us </h1>
-            <h3> Learn more about how and why we created RecycleRight </h3>
-            <button><a href="/about-us">About Us</a></button>
-        </div>
-        
-        <div class="right" id="white">
-            <h1>Learn More About Recycling</h1> 
-            <h2>Take a look at our recycling guide to discover what's recyclable in your area!</h2>
-            <button><a href="/recycling-guide">Recycling Guide</a></button>
-        </div>
+      <div class="left" id="blue">
+        <h1>Get to Know Us</h1>
+        <h3>Learn more about how and why we created RecycleRight</h3>
+        <button class="sectionButton"><a href="/about-us">About Us</a></button>
+      </div>
+
+      <div class="right" id="white">
+        <h1>Learn More About Recycling</h1>
+        <h3>
+          Take a look at our recycling guide to discover what's recyclable in
+          your area!
+        </h3>
+        <button class="sectionButton"><a href="/recycling-guide">Recycling Guide</a></button>
+      </div>
     </div>
     <div class="section">
-        <div class="left" id="white">
-            <h1> Track Your Waste </h1>
-            <h2> Use our waste tracking tool to monitor your recycling goals! </h2>
-            <button><a href="/tracking-tool">Tracking Tool</a></button>
-        </div>
-        
-        <div class="right" id="blue">
-            <h1>View Progress</h1> 
-            <h2>Our progress timeline allows you to visualize your efforts over time!</h2>
-            <button><a href="/Progress-timeline">Progress Timeline</a></button>
-        </div>
+      <div class="left" id="white">
+        <h1>Track Your Waste</h1>
+        <h3>Use our waste tracking tool to monitor your recycling goals!</h3>
+        <button class="sectionButton"><a href="/tracking-tool">Tracking Tool</a></button>
+      </div>
+
+      <div class="right" id="blue">
+        <h1>View Progress</h1>
+        <h3>
+          Our progress timeline allows you to visualize your efforts over time!
+        </h3>
+        <button class="sectionButton"><a href="/progress-timeline">Progress Timeline</a></button>
+      </div>
     </div>
-</body>
+  </body>
 </html>

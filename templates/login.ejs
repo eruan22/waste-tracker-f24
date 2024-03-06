@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>User Login</title>
-</head>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<h1>User Login</h1>
-
-<body>
-    
-
+  <body>
     <!-- Display success flash message if available -->
     <% if (success && success.length > 0) { %>
-        <div class="alert alert-success">
-            <%= success[0] %>
-        </div>
+    <div class="alert alert-success"><%= success[0] %></div>
     <% } %>
 
     <!-- Display error flash message if available -->
     <% if (error && error.length > 0) { %>
-        <div class="alert alert-danger">
-            <%= error[0] %>
-        </div>
+    <div class="alert alert-danger"><%= error[0] %></div>
     <% } %>
-    
-    <div class="greenBox">
-        <form action="/login" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
-
-            <button type="submit">Login</button>
-        </form>
+    <div class="navBar">
+      <div>
+        <h1>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
+        </h1>
+      </div>
+      <button class="sectionButton"><a href="/login">Log In/Sign Up</a></button>
+      <button class="sectionButton"><a href="/recycling-guide">Recycling Guide</a></button>
+      <!-- fix this later -->
+      <!-- <label for="dog-names">Features</label> 
+        <select name="Features" id="feat"> 
+            <button><option value="waste">Waste Tracker</option> </button>
+            <option value="progress">Progress Tracker</option> 
+        </select> -->
+      <button class="sectionButton"><a href="/waste-tracker">Waste Tracker</a></button>
+      <button class="sectionButton"><a href="/progress-timeline">Progress Tracker</a></button>
+      <button class="sectionButton"><a href="/about-us">About Us</a></button>
     </div>
-    
-    <p>Don't have an account? <a href="/register">Register here</a></p>
-</body>
+    <h1 class="loginPage">User Login</h1>
+    <div class="greenBox">
+      <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br />
 
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <p>Don't have an account? <a href="/register">Register here</a></p>
+  </body>
 </html>
