@@ -6,3 +6,9 @@ h1 {
 .greenBox {
     background-color: lightgreen;
 }
+
+body {
+    .register {
+        font-size: 20px;
+    }
+}

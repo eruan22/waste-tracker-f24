@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Recycling Guide</title>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,12 +14,12 @@
   <body>
     <!-- Display success flash message if available -->
     <% if (success && success.length> 0) { %>
-    <div class="alert alert-success"><%= success[0] %></div>
+      <div class="alert alert-success"><%= success[0] %></div>
     <% } %>
 
     <!-- Display error flash message if available -->
     <% if (error && error.length> 0) { %>
-    <div class="alert alert-danger"><%= error[0] %></div>
+      <div class="alert alert-danger"><%= error[0] %></div>
     <% } %>
     <div class="navBar">
       <div>
@@ -44,14 +44,13 @@
         <a href="/progress-timeline">Progress Tracker</a>
       </button>
       <button class="sectionButton"><a href="/about-us">About Us</a></button>
+      <button class="sectionButton"><a href="/logout">Logout</a></button>
     </div>
     <h1>Recycling Guide</h1>
-    <b
-      >Make sure to clean and dry all items before putting them in your
-      recycling bin!</b
-    >
+    <h3>Make sure to clean and dry all items before putting them in your
+      recycling bin!</h3>
 
-    <h3>Accepted in curbside recycling bin:</h3>
+    <b>Accepted in curbside recycling bin:</b>
     <ul>
       <li>Plastic bottles & containers</li>
       <li>Tin, aluminum, & steel cans</li>
@@ -59,15 +58,15 @@
       <li>Flattened cardboard & paperboard</li>
     </ul>
 
-    <h3>Accepted in some regions:</h3>
+    <b>Accepted in some regions:</b>
     <ul>
       <li>Milk cartons, juice boxes & food cartons</li>
       <li>Glass</li>
     </ul>
 
-    <h3>
-      Not accepted in curbside recycling (try reducing and reusing instead):
-    </h3>
+    <b>
+      Not accepted in curbside recycling (opt for reducing and reusing instead):
+    </b>
     <ul>
       <li>Plastic bags (check out plasticfilmrecycling.org for more info)</li>
       <li>Plastic wrap, bubble wrap, sandwich bags, and freezer bags</li>
@@ -77,10 +76,55 @@
       <li>Polystyrene foam, plastic to-go containers, and cups</li>
     </ul>
 
-    <h3>Check locally for special collection programs:</h3>
+    <b>Check locally for special collection programs:</b>
     <ul>
-      <li>Clothing, textiles, shower curtains, mini pools, fencing, furniture</li>
+      <li>
+        Clothing, textiles, shower curtains, mini pools, fencing, furniture
+      </li>
       <li>Car parts, scrap metal, tires, filters</li>
     </ul>
+    <h3>Compostable Items</h3>
+    <b>Options for composting at home:</b>
+    <ul>
+      <li>
+        Backyard Composting, vermicomposting
+      </li>
+
+      <b>Materials to add to your backyard composting: </b>
+      <ul>
+        <li>
+          Fruit and vegetable scraps, Dry leaves
+        </li>
+        <li>
+          Grass clippings,	Plant stalks, and twigs
+        </li>
+        <li>
+          Coffee grounds and paper filters,	Shredded paper (non-glossy, uncolored), and shredded brown bags
+        </li>
+        <li>
+          Paper tea bags (no staples),	Shredded cardboard (no wax coating, tape, or glue)
+        </li>
+        <li>
+          Eggshells (crushed),	Untreated wood chips
+        </li>
+      </ul>
+        <b>What to avoid adding to your compost pile:</b>
+        <ul>
+          <li>Meat, fish, and bones,
+            Cheese and dairy products,
+            Fats, oils, and grease,
+            Cooked food (small amounts are fine),</li>
+            <li>Compostable foodservice ware and compostable bags,
+              Herbicide-treated plants and grass,
+              Aggressive weeds/weeds with seeds,
+              Diseased and pest-infested plants</li>
+              <li>Treated or painted wood,
+                Pet waste and cat litter</li>
+                <li>Dryer lint,
+                  Glossy paper,
+                  Produce stickers</li>
+              
+        </ul>
+
   </body>
 </html>

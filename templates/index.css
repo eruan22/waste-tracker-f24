@@ -1,7 +1,7 @@
 body {
     background-color: #E9FFE1;
     margin:0px;
-    text-align: center;
+    /* text-align: center; */
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
@@ -111,4 +111,16 @@ h3 {
 
 .greenBox {
     background-color: lightgreen;
+}
+
+.aboutUs {
+
+    border-radius: 10 px;
+    background-color: white;
+    font-family: "Manrope", sans-serif;
+    padding: 10px;
+    border-color: #4D7602;
+}
+h6 {
+text-align: left
 }

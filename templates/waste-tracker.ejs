@@ -1,60 +1,89 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Waste Tracker</title>
-</head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
+    <div class="navBar">
+      <div>
+        <h1>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
+        </h1>
+      </div>
+      <!-- <button class="sectionButton"><a href="/login">Log In/Sign Up</a></button> -->
+      <button class="sectionButton">
+        <a href="/recycling-guide">Recycling Guide</a>
+      </button>
+      <!-- fix this later -->
+      <!-- <label for="dog-names">Features</label> 
+        <select name="Features" id="feat"> 
+            <button><option value="waste">Waste Tracker</option> </button>
+            <option value="progress">Progress Tracker</option> 
+        </select> -->
+      <button class="sectionButton">
+        <a href="/waste-tracker">Waste Tracker</a>
+      </button>
+      <button class="sectionButton">
+        <a href="/progress-timeline">Progress Tracker</a>
+      </button>
+      <button class="sectionButton"><a href="/about-us">About Us</a></button>
+      <button class="sectionButton"><a href="/logout">Logout</a></button>
+    </div>
+
     <h1>Waste Tracker</h1>
-
-    <% if (wasteData.length===0) { %>
-        <p>No waste data available.</p>
-    <% } else { %>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Date & Time</th>
-                    <th>Waste Type</th>
-                    <th>Weight (kg)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% wasteData.forEach(function (entry) { %>
-                    <tr>
-                        <td>
-                            <%= entry.timestamp %>
-                        </td>
-                        <td>
-                            <%= entry.waste_type %>
-                        </td>
-                        <td>
-                            <%= entry.weight %>
-                        </td>
-                    </tr>
-                    <% }); %>
-            </tbody>
-        </table>
-    <% } %>
 
     <!-- Form to submit more waste data -->
     <form action="/waste-tracker" method="POST">
-        <label for="wasteType">Waste Type:</label>
-        <input type="text" id="wasteType" name="wasteType" required><br>
+      <label for="wasteType">Waste Type:</label>
+      <input type="text" id="wasteType" name="wasteType" required /><br />
 
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" name="weight" step="0.01" required><br>
+      <label for="weight">Weight (kg):</label>
+      <input
+        type="number"
+        id="weight"
+        name="weight"
+        step="0.01"
+        required
+      /><br />
 
-        <button type="submit">Submit Waste Data</button>
+      <button type="submit">Submit Waste Data</button>
     </form>
 
-    <a href="/logout">Logout</a>
+    <% if (wasteData.length===0) { %>
+    <p>No waste data available.</p>
+    <% } else { %>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date & Time</th>
+          <th>Waste Type</th>
+          <th>Weight (kg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% wasteData.forEach(function (entry) { %>
+        <tr>
+          <td><%= entry.timestamp %></td>
+          <td><%= entry.waste_type %></td>
+          <td><%= entry.weight %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } %>
 
     <!-- JavaScript to dynamically update content -->
     <script>
-        // JavaScript code here to update content dynamically
+      // JavaScript code here to update content dynamically
     </script>
-</body>
-
+  </body>
 </html>
