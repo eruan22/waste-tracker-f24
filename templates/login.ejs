@@ -27,8 +27,8 @@
           <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
         </h1>
       </div>
-      <button class="sectionButton"><a href="/login">Log In/Sign Up</a></button>
-      <button class="sectionButton">
+      <button class="navBarButton"><a href="/login">Log In/Sign Up</a></button>
+      <button class="navBarButton">
         <a href="/recycling-guide">Recycling Guide</a>
       </button>
       <!-- fix this later -->
@@ -37,27 +37,25 @@
             <button><option value="waste">Waste Tracker</option> </button>
             <option value="progress">Progress Tracker</option> 
         </select> -->
-      <button class="sectionButton">
+      <button class="navBarButton">
         <a href="/waste-tracker">Waste Tracker</a>
       </button>
-      <button class="sectionButton">
+      <button class="navBarButton">
         <a href="/progress-timeline">Progress Tracker</a>
       </button>
-      <button class="sectionButton"><a href="/about-us">About Us</a></button>
+      <button class="navBarButton"><a href="/about-us">About Us</a></button>
+      <button class="navBarButton"><a href="/binny">Binny</a></button>
     </div>
-    <h1 class="loginPage">User Login</h1>
     <div class="greenBox">
-      <form action="/login" method="POST">
+      <h1 class="loginPage">User Login</h1>
+      <form class="loginForm" action="/login" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required /><br />
-
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required /><br />
-
         <button type="submit">Login</button>
       </form>
+      <p class="loginPageText">Don't have an account? <a href="/register">Register here</a></p>
     </div>
-
-    <p id="register">Don't have an account? <a href="/register">Register here</a> </p>
   </body>
 </html>

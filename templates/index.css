@@ -1,3 +1,4 @@
+/* index stylin */
 body {
     background-color: #E9FFE1;
     margin:0px;
@@ -13,13 +14,15 @@ body {
     background-color: white;
 }
 
-h3 {
+.homeh3 {
     text-align: center;
 }
+
 .logoPic {
     width: 100px;
     height: 100px;
 }
+
 .navBar {
     background-color:#A1D88E;
 }
@@ -29,16 +32,16 @@ h3 {
     margin: 0px;
     padding: 10px;
 }
+
 p {
     font-size: 30px;
     border-width: 400px;
 }
+
 div {
     text-align: center;
 }
-h3 {
-    text-align: center;
-}
+
 .section {
     display: flex;
     justify-content: space-between;
@@ -71,6 +74,7 @@ h3 {
 #white{
     background-color: white;
 }
+
 .navBarButton{
     border-color:black;
     background-color:#E6FFDB;
@@ -87,6 +91,7 @@ h3 {
         text-decoration: none;
     }
 }
+
 .sectionButton {
     border-color: black;
     background-color:white;
@@ -104,15 +109,26 @@ h3 {
     }
 }
 
+/* login page ------------------------------------------------------------------------- */
+
 .loginPage h1 {
-    font-size: 1000000px;
-    font-family: "Manrope", sans-serif;
+    text-align: center;
+}
+
+.loginPageText {
+    font-size: 20px;
 }
 
 .greenBox {
-    background-color: lightgreen;
+    background-color: #94C085;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    /* padding-top: 40px; */
 }
 
+/* about us page ------------------------------------------------------------------------- */
 .aboutUs {
 
     border-radius: 10 px;
@@ -121,6 +137,61 @@ h3 {
     padding: 10px;
     border-color: #4D7602;
 }
+
 h6 {
-text-align: left
+    text-align: left;
 }
+
+/* register page ------------------------------------------------------------------------- */
+.registerpage{
+    background-color: white;
+   
+    .register {
+        background-color: #94C085;
+        border-radius: 7px; 
+        width: 25%;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+        vertical-align: center;
+        line-height: 2;
+        text-align: center
+        
+    }
+    .registerbutton {
+        border-color: black;
+        background-color:white;
+        color: black;
+        padding: 5px;
+        font-family: "Manrope", sans-serif;
+        margin: 5px;
+        border-radius: 4px;
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:visited {
+            color: black;
+            text-decoration: none;
+    }
+}
+}
+
+
+/* binny page ------------------------------------------------------------------------- */
+h1 {
+    text-align: center
+}
+h4 {
+    text-align: center;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-width: 50px;
+  }
+  
+/* recycling guide page ------------------------------------------------------------------------- */
+
+/* waste tracker page ------------------------------------------------------------------------- */

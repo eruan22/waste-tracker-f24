@@ -299,6 +299,14 @@ app.get("/progress-timeline", (req, res) => {
   });
 });
 
+app.get("/binny", (req, res) => {
+  res.render("binny", {
+    success: req.flash("success"),
+    error: req.flash("error"),
+  });
+});
+
+
 // app.get('/', (req, res) => {
 //     res.render('register', { success: req.flash('success'), error: req.flash('error') });
 // });
