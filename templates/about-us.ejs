@@ -22,65 +22,72 @@
     <div class="alert alert-danger"><%= error[0] %></div>
     <% } %>
     <div class="navBar">
-      <div>
-        <h1>
-          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
-        </h1>
+      <div class="navBar">
+        <div>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>
+        </div>
+        <div>
+          <h1>RecycleRight</h1>
+        </div>
       </div>
-      <button class="sectionButton"><a href="/login">Log In/Sign Up</a></button>
-      <button class="sectionButton">
-        <a href="/recycling-guide">Recycling Guide</a>
-      </button>
-      <!-- fix this later -->
-      <!-- <label for="dog-names">Features</label> 
-        <select name="Features" id="feat"> 
-            <button><option value="waste">Waste Tracker</option> </button>
-            <option value="progress">Progress Tracker</option> 
-        </select> -->
-      <button class="sectionButton">
-        <a href="/waste-tracker">Waste Tracker</a>
-      </button>
-      <button class="sectionButton">
-        <a href="/progress-timeline">Progress Tracker</a>
-      </button>
-      <button class="sectionButton"><a href="/about-us">About Us</a></button>
-      <button class="sectionButton"><a href="/logout">Logout</a></button>
+      <div class="rightButton">
+        <% if (!isLoggedIn) { %>
+        <button class="navBarButton">
+          <a href="/login">Log In/Sign Up</a>
+        </button>
+        <% } %>
+        <button class="navBarButton">
+          <a href="/recycling-guide">Recycling Guide</a>
+        </button>
+        <button class="navBarButton">
+          <a href="/waste-tracker">Waste Tracker</a>
+        </button>
+        <button class="navBarButton">
+          <a href="/progress-timeline">Progress Tracker</a>
+        </button>
+        <button class="navBarButton"><a href="/about-us">About Us</a></button>
+        <button class="navBarButton"><a href="/binny">Binny</a></button>
+        <% if (isLoggedIn) { %>
+        <button class="navBarButton"><a href="/logout">Logout</a></button>
+        <% } %>
+      </div>
     </div>
     <h1>About Us</h1>
 
-    <div class="aboutUs">
-      <h4>Erin Lee</h4>
-      <article>Project Lead</article>
+    <div class="circles aboutUs">
+      <div>
+        <h3>Erin Lee</h3>
+        <article>Project Lead</article>
+      </div>
+      <div>
+        <img class="headshots" src="/images/jennifer.jpeg" />
+        <h3>Jennifer Lee</h3>
+        <article>Project Lead</article>
+      </div>
+
+      <div>
+        <h3>Nina Murphy</h3>
+        <article>Developer</article>
+      </div>
     </div>
 
-    <div class="aboutUs">
-      <h4>Jennifer Lee</h4>
-      <article>Project Lead</article>
-    </div>
+    <div class="circles">
+      <div>
+        <img class="headshots" src="/images/karen.jpeg" />
+        <h3>Karen Wang</h3>
+        <article>Developer</article>
+      </div>
+      <div>
+        <img class="headshots" src="/images/gabby.jpeg" />
+        <h3>Gabrielle Seib-Napolitan</h3>
+        <article>Developer</article>
+      </div>
 
-    <div class="aboutUs">
-      <h4>Nina Murphy</h4>
-      <article>Developer</article>
-    </div>
-
-    <div class="aboutUs">
-      <h4>Karen Wang</h4>
-      <article>Developer and Binny Enjoyer</article>
-    </div>
-
-    <div class="aboutUs">
-      <h4>Gabrielle Seib-Napolitan</h4>
-      <article>Developer</article>
-    </div>
-
-    <div class="aboutUs">
-      <h4>Gulzar Attari</h4>
-      <article>Developer</article>
-    </div>
-
-    <div class="aboutUs">
-      <h4>Khush Bafna</h4>
-      <article>Developer</article>
+      <div>
+        <img class="headshots" src="/images/gulzar.jpeg" />
+        <h3>Gulzar Attari</h3>
+        <article>Developer</article>
+      </div>
     </div>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>User Registration</title>
+    <title>Register</title>
     <link rel="stylesheet" href="index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,26 +27,30 @@
         </div>
     <% } %>
     <div class="navBar">
-      <div>
-        <h1>
-          <a href="/"><img class="logoPic" src="binny.svg" /></a>RecycleRight
-        </h1>
+     <div class="navBar">
+        <div>
+          <a href="/"><img class="logoPic" src="binny.svg"/></a>
+        </div>
+        <div>
+          <h1>RecycleRight</h1>
+        </div>
       </div>
-      <button class="navBarButton"><a href="/login">Log In/Sign Up</a></button>
-      <button class="navBarButton"><a href="/recycling-guide">Recycling Guide</a></button>
-      <!-- fix this later -->
-      <!-- <label for="dog-names">Features</label> 
-        <select name="Features" id="feat"> 
-            <button><option value="waste">Waste Tracker</option> </button>
-            <option value="progress">Progress Tracker</option> 
-        </select> -->
-      <button class="navBarButton"><a href="/waste-tracker">Waste Tracker</a></button>
-      <button class="navBarButton"><a href="/progress-timeline">Progress Tracker</a></button>
-      <button class="navBarButton"><a href="/about-us">About Us</a></button>
-      <button class="navBarButton"><a href="/logout">Logout</a></button>
+      <div class="rightButton">
+        <% if (!isLoggedIn) { %>
+        <button class="navBarButton"><a href="/login">Log In/Sign Up</a></button>
+        <% } %>
+        <button class="navBarButton"><a href="/recycling-guide">Recycling Guide</a></button>
+        <button class="navBarButton"><a href="/waste-tracker">Waste Tracker</a></button>
+        <button class="navBarButton"><a href="/progress-timeline">Progress Tracker</a></button>
+        <button class="navBarButton"><a href="/about-us">About Us</a></button>
+        <button class="navBarButton"><a href="/binny">Binny</a></button>
+        <% if (isLoggedIn) { %>
+          <button class="navBarButton"><a href="/logout">Logout</a></button>
+        <% } %>
+      </div>
     </div>
     <div class="register">
-      <h1>User Registration</h1>
+      <h1>Register</h1>
         <form action="/register" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br>

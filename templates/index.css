@@ -1,4 +1,4 @@
-/* index stylin */
+/* index styling */
 body {
     background-color: #E9FFE1;
     margin:0px;
@@ -25,12 +25,20 @@ body {
 
 .navBar {
     background-color:#A1D88E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
     
 .navBar h1 {
+    /* margin-top: -21px; */
     text-align: left;
-    margin: 0px;
-    padding: 10px;
+}
+
+.rightButton {
+    margin-right: 18px;
 }
 
 p {
@@ -38,13 +46,14 @@ p {
     border-width: 400px;
 }
 
-div {
+/* div {
     text-align: center;
-}
+} */
 
 .section {
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 .left {
     align-items: left;
@@ -109,48 +118,65 @@ div {
     }
 }
 
+.aboutUs {
+    text-align: left;
+}
 /* login page ------------------------------------------------------------------------- */
-
 .loginPage h1 {
     text-align: center;
+
 }
 
 .loginPageText {
-    font-size: 20px;
+   font-size: 20px;
 }
 
 .greenBox {
     background-color: #94C085;
-    width: 30%;
-    margin: auto;
-    margin-top: 50px;
-    padding: 20px;
+    border-radius: 7px; 
+    width: 27%;
+    margin-left: auto;
+    margin-top: 150px;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    vertical-align: center;
+    line-height: 2;
+    text-align: center;
     /* padding-top: 40px; */
-}
 
-/* about us page ------------------------------------------------------------------------- */
-.aboutUs {
-
-    border-radius: 10 px;
-    background-color: white;
-    font-family: "Manrope", sans-serif;
-    padding: 10px;
-    border-color: #4D7602;
-}
-
-h6 {
-    text-align: left;
+    }
+.loginbutton {
+    border-color: black;
+        background-color:white;
+        color: black;
+        padding: 5px;
+        font-family: "Manrope", sans-serif;
+        margin: 5px;
+        border-radius: 4px;
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:visited {
+            color: black;
+            text-decoration: none;
+    }
+    
 }
 
 /* register page ------------------------------------------------------------------------- */
 .registerpage{
-    background-color: white;
+    background-color: #E9FFE1;
    
     .register {
         background-color: #94C085;
         border-radius: 7px; 
         width: 25%;
-        margin: auto;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 50px;
         padding-bottom: 50px;
         align-items: center;
@@ -178,6 +204,28 @@ h6 {
 }
 }
 
+/* about us page ------------------------------------------------------------------------- */
+.aboutUs {
+    align-items: center;
+    border-radius: 10 px;
+    /* background-color: white; */
+    font-family: "Manrope", sans-serif;
+    padding: 10px;
+    border-color: #4D7602;
+}
+
+.headshots {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
 
 /* binny page ------------------------------------------------------------------------- */
 h1 {
@@ -186,12 +234,22 @@ h1 {
 h4 {
     text-align: center;
 }
-.circle {
-    width: 100px;
-    height: 100px;
-    border-width: 50px;
-  }
-  
+ .logoPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+ }
 /* recycling guide page ------------------------------------------------------------------------- */
-
+body.recyclingGuide {
+    background-color: white;
+}
+h1.recyclingHeader {
+    text-align: center;
+    background-color: #E9FFE1;
+}
+h1.compostingHeader {
+    text-align: center;
+    background-color: #E9FFE1;
+}
 /* waste tracker page ------------------------------------------------------------------------- */

@@ -5,13 +5,15 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const flash = require("express-flash");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("users.db");
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
+
+app.use("/images", express.static("./images"));
 
 // Set the views directory
 app.set("views", path.join(__dirname, "templates"));
@@ -45,12 +47,9 @@ db.serialize(() => {
     )`);
 });
 
-// Define a route for the login page
-app.get("/login", (req, res) => {
-  res.render("login", {
-    success: req.flash("success"),
-    error: req.flash("error"),
-  });
+app.use((req, res, next) => {
+  res.locals.isLoggedIn = !!req.session.user_id;
+  next();
 });
 
 app.use(express.static("public"));
@@ -75,7 +74,7 @@ app.post("/login", (req, res) => {
         // Authentication successful
         req.session.user_id = row.id; // Store user ID in the session
         req.flash("success", "Login successful.");
-        res.redirect("/waste-tracker");
+        res.redirect("/");
       } else {
         // Authentication failed
         req.flash("error", "Invalid username or password.");
@@ -132,6 +131,14 @@ app.post("/register", (req, res) => {
         }
       );
     }
+  });
+});
+
+// Define a route for the login page
+app.get("/login", (req, res) => {
+  res.render("login", {
+    success: req.flash("success"),
+    error: req.flash("error"),
   });
 });
 
@@ -293,6 +300,10 @@ app.get("/about-us", (req, res) => {
 });
 
 app.get("/progress-timeline", (req, res) => {
+  if (!req.session.user_id) {
+    req.flash("error", "Please log in to view progress timeline.");
+    return res.redirect("/login");
+  }
   res.render("progress-timeline", {
     success: req.flash("success"),
     error: req.flash("error"),
@@ -305,7 +316,6 @@ app.get("/binny", (req, res) => {
     error: req.flash("error"),
   });
 });
-
 
 // app.get('/', (req, res) => {
 //     res.render('register', { success: req.flash('success'), error: req.flash('error') });
