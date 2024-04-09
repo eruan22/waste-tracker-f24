@@ -11,7 +11,7 @@
     />
   </head>
 
-  <body class="recyclingGuide">
+  <body>
     <!-- Display success flash message if available -->
     <% if (success && success.length> 0) { %>
     <div class="alert alert-success"><%= success[0] %></div>
@@ -51,90 +51,97 @@
         <button class="navBarButton"><a href="/about-us">About Us</a></button>
         <button class="navBarButton"><a href="/binny">Binny</a></button>
         <% if (isLoggedIn) { %>
+        <button class="navBarButton"><a href="/settings">Settings</a></button>
         <button class="navBarButton"><a href="/logout">Logout</a></button>
         <% } %>
       </div>
     </div>
-    <h1 class="recyclingHeader">
-      Recycling Guide</h1>
-    <h3> Make sure to clean and dry all items before putting them in your recycling
-      bin!
-    </h3>
+    <div class="recyclingGuide">
+      <h1 class="recyclingHeader">Recycling Guide</h1>
+      <div class="recycleText">
+        <h3>
+          Make sure to clean and dry all items before putting them in your
+          recycling bin!
+        </h3>
 
-    <b>Accepted in curbside recycling bin:</b>
-    <ul>
-      <li>Plastic bottles & containers</li>
-      <li>Tin, aluminum, & steel cans</li>
-      <li>Paper, newspaper, & magazines</li>
-      <li>Flattened cardboard & paperboard</li>
-    </ul>
+        <b>Accepted in curbside recycling bin:</b>
+        <ul>
+          <li>Plastic bottles & containers</li>
+          <li>Tin, aluminum, & steel cans</li>
+          <li>Paper, newspaper, & magazines</li>
+          <li>Flattened cardboard & paperboard</li>
+          <img class="recycleImg" src="https://shorturl.at/ijwQW" />
+        </ul>
+        <b>Accepted in some regions:</b>
+        <ul>
+          <li>Milk cartons, juice boxes & food cartons</li>
+          <li>Glass</li>
+        </ul>
 
-    <b>Accepted in some regions:</b>
-    <ul>
-      <li>Milk cartons, juice boxes & food cartons</li>
-      <li>Glass</li>
-    </ul>
+        <b>
+          Not accepted in curbside recycling (opt for reducing and reusing
+          instead):
+        </b>
+        <ul>
+          <li>
+            Plastic bags (check out plasticfilmrecycling.org for more info)
+          </li>
+          <li>Plastic wrap, bubble wrap, sandwich bags, and freezer bags</li>
+          <li>Chip bags</li>
+          <li>Juice and soup pouches</li>
+          <li>Cups with wax or plastic coating</li>
+          <li>Polystyrene foam, plastic to-go containers, and cups</li>
+        </ul>
 
-    <b>
-      Not accepted in curbside recycling (opt for reducing and reusing instead):
-    </b>
-    <ul>
-      <li>Plastic bags (check out plasticfilmrecycling.org for more info)</li>
-      <li>Plastic wrap, bubble wrap, sandwich bags, and freezer bags</li>
-      <li>Chip bags</li>
-      <li>Juice and soup pouches</li>
-      <li>Cups with wax or plastic coating</li>
-      <li>Polystyrene foam, plastic to-go containers, and cups</li>
-    </ul>
+        <b>Check locally for special collection programs:</b>
+        <ul>
+          <li>
+            Clothing, textiles, shower curtains, mini pools, fencing, furniture
+          </li>
+          <li>Car parts, scrap metal, tires, filters</li>
+        </ul>
+      </div>
+      <h1 class="compostingHeader">Composting Guide</h1>
+      <div class="recycleText">
+        <b>Compost in your home backyard!</b>
+        <ol>
+          <li>Use a bin/tumbler and place it in a dry, shady area</li>
+          <li>
+            When building the pile, alternate layers of brown and green in a 4:1
+            ratio (materials listed below!)
+          </li>
+          <li>Mix every 1-2 weeks and keep the pile moist</li>
+        </ol>
 
-    <b>Check locally for special collection programs:</b>
-    <ul>
-      <li>
-        Clothing, textiles, shower curtains, mini pools, fencing, furniture
-      </li>
-      <li>Car parts, scrap metal, tires, filters</li>
-    </ul>
+        <b>Brown (Carbon-rich) Materials to add:</b>
+        <ul>
+          <li>Dry leaves, sawdust, (untreated) wood chips</li>
+          <li>
+            Paper tea bags (no staples), shredded cardboard (no wax coating,
+            tape, or glue), shredded paper
+          </li>
+        </ul>
+        <b>Green (Nitrogen-rich) Materials to add:</b>
+        <ul>
+          <li>Fruit and vegetable scraps</li>
+          <li>Grass clippings, weed trimmings</li>
+          <li>Tea bags, coffee grounds</li>
+        </ul>
 
-    <h1 class="compostingHeader">
-      Composting Guide</h1>
-    <b>Compost in your home backyard!</b>
-    <ol>
-      <li>Use a bin/tumbler and place it in a dry, shady area</li>
-      <li>
-        When building the pile, alternate layers of brown and green in a 4:1
-        ratio (materials listed below!)
-      </li>
-      <li>Mix every 1-2 weeks and keep the pile moist</li>
-    </ol>
-
-    <b>Brown (Carbon-rich) Materials to add:</b>
-    <ul>
-      <li>Dry leaves, sawdust, (untreated) wood chips</li>
-      <li>
-        Paper tea bags (no staples), shredded cardboard (no wax coating, tape,
-        or glue), shredded paper
-      </li>
-    </ul>
-    <b>Green (Nitrogen-rich) Materials to add:</b>
-    <ul>
-      <li>Fruit and vegetable scraps</li>
-      <li>Grass clippings, weed trimmings</li>
-      <li>Tea bags, coffee grounds</li>
-    </ul>
-
-    <b>What to avoid adding to your compost pile:</b>
-    <ul>
-      <li>
-        Meat, fish, and bones, Cheese and dairy products, Fats, oils, and
-        grease, Cooked food (small amounts are fine),
-      </li>
-      <li>
-        Herbicide-treated
-        plants and grass Aggressive weeds/weeds with seeds, Diseased and
-        pest-infested plants
-      </li>
-      <li>Treated or painted wood, Pet waste and cat litter</li>
-      <li>Dryer lint, Glossy paper, Produce stickers</li>
-    </ul>
+        <b>What to avoid adding to your compost pile:</b>
+        <ul>
+          <li>
+            Meat, fish, and bones, Cheese and dairy products, Fats, oils, and
+            grease, Cooked food (small amounts are fine),
+          </li>
+          <li>
+            Herbicide-treated plants and grass Aggressive weeds/weeds with
+            seeds, Diseased and pest-infested plants
+          </li>
+          <li>Treated or painted wood, Pet waste and cat litter</li>
+          <li>Dryer lint, Glossy paper, Produce stickers</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

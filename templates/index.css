@@ -219,12 +219,21 @@ p {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    align-items: center;
 }
 
 .circles {
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
     margin: auto;
+    padding: 50px;
+}
+
+.single {
+    justify-content: space-evenly;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 /* binny page ------------------------------------------------------------------------- */
@@ -241,15 +250,44 @@ h4 {
     width: 100%
  }
 /* recycling guide page ------------------------------------------------------------------------- */
-body.recyclingGuide {
+.recycleText {
     background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-h1.recyclingHeader {
+.recyclingHeader {
+    text-align: center;
+    background-color: #E9FFE1;
+    padding-left: -40px;
+}
+.compostingHeader h1 {
     text-align: center;
     background-color: #E9FFE1;
 }
-h1.compostingHeader {
-    text-align: center;
-    background-color: #E9FFE1;
+
+.recycleImg {
+    margin-top: 20px;
 }
 /* waste tracker page ------------------------------------------------------------------------- */
+
+
+/* settings page ------------------------------------------------------------------------- */
+.settingspage {
+    background-color: white;
+    font-family: "Manrope", sans-serif;
+}
+.settingsbox {
+    background-color: #94C085;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 7px;
+
+    }

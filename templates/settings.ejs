@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Waste Tracker</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <title>Settings</title>
-</head>
-
-<h1>Settings</h1>
-
-<body>
-
-
+  <body class="settingspage">
     <!-- Display success flash message if available -->
     <% if (success && success.length> 0) { %>
-        <div class="alert alert-success">
-            <%= success[0] %>
+    <div class="alert alert-success"><%= success[0] %></div>
+    <% } %>
+
+    <!-- Display error flash message if available -->
+    <% if (error && error.length> 0) { %>
+    <div class="alert alert-danger"><%= error[0] %></div>
+    <% } %>
+
+    <div class="navBar">
+      <div class="navBar">
+        <div>
+          <a href="/"><img class="logoPic" src="binny.svg" /></a>
         </div>
+        <div>
+          <h1>RecycleRight</h1>
+        </div>
+      </div>
+      <div class="rightButton">
+        <% if (!isLoggedIn) { %>
+        <button class="navBarButton">
+          <a href="/login">Log In/Sign Up</a>
+        </button>
         <% } %>
+        <button class="navBarButton">
+          <a href="/recycling-guide">Recycling Guide</a>
+        </button>
+        <button class="navBarButton">
+          <a href="/waste-tracker">Waste Tracker</a>
+        </button>
+        <button class="navBarButton">
+          <a href="/progress-timeline">Progress Tracker</a>
+        </button>
+        <button class="navBarButton"><a href="/about-us">About Us</a></button>
+        <button class="navBarButton"><a href="/binny">Binny</a></button>
+        <% if (isLoggedIn) { %>
+        <button class="navBarButton"><a href="/settings">Settings</a></button>
+        <button class="navBarButton"><a href="/logout">Logout</a></button>
+        <% } %>
+      </div>
+    </div>
+    <h1>Settings</h1>
 
-            <!-- Display error flash message if available -->
-            <% if (error && error.length> 0) { %>
-                <div class="alert alert-danger">
-                    <%= error[0] %>
-                </div>
-                <% } %>
-
-</body>
-
+    <div class="settingsbox">
+      <h1>Accessibility</h1>
+      <p>Privacy</p>
+    </div>
+  </body>
 </html>

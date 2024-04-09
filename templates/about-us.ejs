@@ -48,6 +48,7 @@
         <button class="navBarButton"><a href="/about-us">About Us</a></button>
         <button class="navBarButton"><a href="/binny">Binny</a></button>
         <% if (isLoggedIn) { %>
+        <button class="navBarButton"><a href="/settings">Settings</a></button>
         <button class="navBarButton"><a href="/logout">Logout</a></button>
         <% } %>
       </div>
@@ -56,6 +57,7 @@
 
     <div class="circles aboutUs">
       <div>
+        <img src="/images/erin.png" />
         <h3>Erin Lee</h3>
         <article>Project Lead</article>
       </div>
@@ -66,7 +68,8 @@
       </div>
 
       <div>
-        <h3>Nina Murphy</h3>
+        <img class="headshots" src="/images/jennifer.jpeg" />
+        <h3>Jenny Xu</h3>
         <article>Developer</article>
       </div>
     </div>
@@ -88,6 +91,10 @@
         <h3>Gulzar Attari</h3>
         <article>Developer</article>
       </div>
+    </div>
+    <div class="single">
+      <h3>Nina Murphy</h3>
+      <article>Developer</article>
     </div>
   </body>
 </html>

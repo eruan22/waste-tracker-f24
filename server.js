@@ -317,6 +317,13 @@ app.get("/binny", (req, res) => {
   });
 });
 
+app.get("/settings", (req, res) => {
+  res.render("settings", {
+    success: req.flash("success"),
+    error: req.flash("error"),
+  });
+});
+
 // app.get('/', (req, res) => {
 //     res.render('register', { success: req.flash('success'), error: req.flash('error') });
 // });
