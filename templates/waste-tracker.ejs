@@ -38,8 +38,8 @@
     </div>
 
     <h1>Waste Tracker</h1>
-
-    <!-- Form to submit more waste data -->
+    <div class="waste">
+      <!-- Form to submit more waste data -->
     <form action="/waste-tracker" method="POST">
       <label for="wasteType">Waste Type:</label>
       <input type="text" id="wasteType" name="wasteType" required /><br />
@@ -57,28 +57,30 @@
     </form>
 
     <% if (wasteData.length===0) { %>
-    <p>No waste data available.</p>
+      <p>No waste data available.</p>
     <% } else { %>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Date & Time</th>
-          <th>Waste Type</th>
-          <th>Weight (kg)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% wasteData.forEach(function (entry) { %>
-        <tr>
-          <td><%= entry.timestamp %></td>
-          <td><%= entry.waste_type %></td>
-          <td><%= entry.weight %></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
+      </div>
+      <div class="waste">
+        <table>
+          <thead>
+            <tr>
+              <th>Date & Time</th>
+              <th>Waste Type</th>
+              <th>Weight (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% wasteData.forEach(function (entry) { %>
+            <tr>
+              <td><%= entry.timestamp %></td>
+              <td><%= entry.waste_type %></td>
+              <td><%= entry.weight %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
     <% } %>
+    </div>
 
     <!-- JavaScript to dynamically update content -->
     <script>

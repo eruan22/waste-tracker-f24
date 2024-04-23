@@ -118,9 +118,7 @@ p {
     }
 }
 
-.aboutUs {
-    text-align: left;
-}
+
 /* login page ------------------------------------------------------------------------- */
 .loginPage h1 {
     text-align: center;
@@ -212,6 +210,7 @@ p {
     font-family: "Manrope", sans-serif;
     padding: 10px;
     border-color: #4D7602;
+    text-align: center;
 }
 
 .headshots {
@@ -236,11 +235,19 @@ p {
     padding-bottom: 20px;
 }
 
+.placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 /* binny page ------------------------------------------------------------------------- */
 h1 {
     text-align: center
 }
-h4 {
+h3 {
     text-align: center;
 }
  .logoPic {
@@ -248,6 +255,13 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     width: 100%
+ }
+ .stars {
+    color: turquoise;
+    
+ }
+ .binnyText {
+    text-align: center;
  }
 /* recycling guide page ------------------------------------------------------------------------- */
 .recycleText {
@@ -270,8 +284,24 @@ h4 {
 .recycleImg {
     margin-top: 20px;
 }
-/* waste tracker page ------------------------------------------------------------------------- */
 
+.smallText {
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* waste tracker page ------------------------------------------------------------------------- */
+.waste {
+    /* text-align: center; */
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* table {
+    table-layout: fixed;
+    width: 100%;
+} */
 
 /* settings page ------------------------------------------------------------------------- */
 .settingspage {
@@ -289,5 +319,87 @@ h4 {
     margin-right: auto;
     width: 30%;
     border-radius: 7px;
+    text-align: center;
 
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    top: 5px;
+    left: 8px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ccc;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  .settings {
+    font-size: 15px;
+  }
+  .settingheader {
+    font-size: 25px;
+  }
+  .change {
+    border-color: black;
+    background-color:white;
+    color: black;
+    padding: 5px;
+    font-family: "Manrope", sans-serif;
+    margin: 5px;
+    border-radius: 4px;
+    a:link {
+        color: black;
+        text-decoration: none;
     }
+    a:visited {
+        color: black;
+        text-decoration: none;
+}
+}
+
+/* progress timeline page ----------------------------------------------------------------- */
+.progress {
+    text-align: center;
+}
