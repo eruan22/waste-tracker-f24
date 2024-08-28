@@ -11,4 +11,5 @@ Web app aimed at helping users develop better waste reduction habits and underst
 - Location Services
 ## How to Run:
 - Run node server.js
-- Should be on localhost:3000
+- Should be on localhost:3002
+- View Google Doc for further steps
