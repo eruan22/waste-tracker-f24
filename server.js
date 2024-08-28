@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const flash = require("express-flash");
 
+// you can change with localhost port you want to open here
 const port = process.env.PORT || 3002;
 
 const sqlite3 = require("sqlite3").verbose();
@@ -47,6 +48,8 @@ db.serialize(() => {
     )`);
 });
 
+// sets up isLoggedIn variable -> created this variable because there are some elements
+// that should only show up when the user is logged in 
 app.use((req, res, next) => {
   res.locals.isLoggedIn = !!req.session.user_id;
   next();
@@ -218,6 +221,8 @@ app.post("/waste-tracker", (req, res) => {
   });
 });
 
+// previous progress timeline code that might be helpful
+
 // app.get("/progress-timeline", (req, res) => {
 //   // Check if the user is logged in
 //   if (!req.session.user_id) {
@@ -246,42 +251,17 @@ app.post("/waste-tracker", (req, res) => {
 //   });
 // });
 
-// app.post("/waste-tracker", (req, res) => {
-//   if (!req.session.user_id) {
-//     req.flash("error", "Please log in to submit waste data.");
-//     return res.redirect("/login");
-//   }
-
-//   // Retrieve the user's ID from the session
-//   const userId = req.session.user_id;
-
-//   // Extract and validate waste data from the request
-//   const wasteType = req.body.wasteType;
-//   const weight = parseFloat(req.body.weight);
-
-//   // Check if the weight is a valid number and greater than 0
-//   if (isNaN(weight) || weight <= 0) {
-//     req.flash("error", "Invalid weight value.");
-//     return res.redirect("/waste-tracker"); // Redirect back to the waste submission page
-//   }
-
-//   // Insert waste data into the database
-//   const insertWasteDataQuery = `
-//         INSERT INTO waste_data (user_id, waste_type, weight)
-//         VALUES (?, ?, ?)
-//     `;
-
-//   const wasteDataValues = [userId, wasteType, weight];
-
-//   db.run(insertWasteDataQuery, wasteDataValues, function (err) {
-//     if (err) {
-//       req.flash("error", "Error storing waste data.");
-//     } else {
-//       req.flash("success", "Waste data recorded successfully.");
-//     }
-//     res.redirect("/waste-tracker"); // Redirect back to the waste submission page
-//   });
-// });
+// current progress timeline code -> just to get the page to appear
+app.get("/progress-timeline", (req, res) => {
+  if (!req.session.user_id) {
+    req.flash("error", "Please log in to view progress timeline.");
+    return res.redirect("/login");
+  }
+  res.render("progress-timeline", {
+    success: req.flash("success"),
+    error: req.flash("error"),
+  });
+});
 
 app.get("/recycling-guide", (req, res) => {
   res.locals.isLoggedIn = !!req.session.user_id;
@@ -294,17 +274,6 @@ app.get("/recycling-guide", (req, res) => {
 
 app.get("/about-us", (req, res) => {
   res.render("about-us", {
-    success: req.flash("success"),
-    error: req.flash("error"),
-  });
-});
-
-app.get("/progress-timeline", (req, res) => {
-  if (!req.session.user_id) {
-    req.flash("error", "Please log in to view progress timeline.");
-    return res.redirect("/login");
-  }
-  res.render("progress-timeline", {
     success: req.flash("success"),
     error: req.flash("error"),
   });

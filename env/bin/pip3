@@ -1,4 +1,4 @@
-#!/Users/jenniferlee/Desktop/waste-tracker-w24/env/bin/python3.11
+#!/Users/test/Desktop/waste-tracker-w24/env/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

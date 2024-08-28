@@ -14,12 +14,12 @@
   <body class="settingspage">
     <!-- Display success flash message if available -->
     <% if (success && success.length> 0) { %>
-    <div class="alert alert-success"><%= success[0] %></div>
+      <div class="alert alert-success"><%= success[0] %></div>
     <% } %>
 
     <!-- Display error flash message if available -->
     <% if (error && error.length> 0) { %>
-    <div class="alert alert-danger"><%= error[0] %></div>
+      <div class="alert alert-danger"><%= error[0] %></div>
     <% } %>
 
     <div class="navBar">
@@ -33,9 +33,9 @@
       </div>
       <div class="rightButton">
         <% if (!isLoggedIn) { %>
-        <button class="navBarButton">
-          <a href="/login">Log In/Sign Up</a>
-        </button>
+          <button class="navBarButton">
+            <a href="/login">Log In/Sign Up</a>
+          </button>
         <% } %>
         <button class="navBarButton">
           <a href="/recycling-guide">Recycling Guide</a>
@@ -49,8 +49,8 @@
         <button class="navBarButton"><a href="/about-us">About Us</a></button>
         <button class="navBarButton"><a href="/binny">Binny</a></button>
         <% if (isLoggedIn) { %>
-        <button class="navBarButton"><a href="/settings">Settings</a></button>
-        <button class="navBarButton"><a href="/logout">Logout</a></button>
+          <button class="navBarButton"><a href="/settings">Settings</a></button>
+          <button class="navBarButton"><a href="/logout">Logout</a></button>
         <% } %>
       </div>
     </div>
@@ -72,10 +72,8 @@
         </label>
       </p>
       <h3 class="settingheader">Account</h3>
-        <button class="change"><a href="/register">Change password</button>
-  
-        <button class="change"><a href="/register">Change username</button>
-
+      <button class="change"><a href="/register">Change password</button>
+      <button class="change"><a href="/register">Change username</button>
     </div>
   </body>
 </html>
