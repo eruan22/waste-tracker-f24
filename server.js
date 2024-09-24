@@ -293,6 +293,13 @@ app.get("/settings", (req, res) => {
   });
 });
 
+app.get("/green-scan", (req, res) => {
+  res.render("green-scan", {
+    success: req.flash("success"),
+    error: req.flash("error"),
+  });
+});
+
 // app.get('/', (req, res) => {
 //     res.render('register', { success: req.flash('success'), error: req.flash('error') });
 // });
