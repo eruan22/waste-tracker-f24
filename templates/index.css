@@ -85,7 +85,7 @@ p {
 }
 
 .navBarButton{
-    border-color:black;
+    border:2px solid darkgreen;
     background-color:#E6FFDB;
     color: black;
     padding: 10px;
