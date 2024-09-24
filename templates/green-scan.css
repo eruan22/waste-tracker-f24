@@ -1,5 +1,38 @@
-h1 {
+.heading {
     font-family: "Manrope", sans-serif;
     font-size: 50px;
     color: green;
+}
+
+p {
+    text-align: center;
+}
+
+.camera {
+    border: 4px solid black;
+    height: 500px;
+    width: 500px;
+    margin: auto; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.camera_screen {
+    border: 4px solid black;
+    height: 400px;
+    width: 400px;
+    margin-top: 5px;
+    /* margin: auto; */
+}
+
+.camera_button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 5px 0px;
+    font-family: "Manrope", sans-serif;
+    background-color: green;
+    color: white;
+    border: 2px solid white;
 }
