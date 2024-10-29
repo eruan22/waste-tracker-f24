@@ -1,4 +1,17 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 70px; 
+}
+
 .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.heading {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,18 +20,30 @@
     gap: 10px; 
 }
 
-.name {
+#name {
     font-family: "Manrope", "Arial", sans-serif;
     font-size: 50px;
+    font-weight: bold;
     color: #1F4B22;
 }
+
 
 #description {
     text-align: center;
     font-family: "Inter", "Arial", sans-serif;
     font-size: 26px; 
-    margin-top: -15px;
-    margin-bottom: 25px; 
+    color: #1F4B22;
+}
+
+.info {
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 20px;
+    display: flex; 
+    margin-left: 80%;
+    text-decoration: underline;
+    gap: 5px;
+    margin-bottom: 40px;
+    
 }
 
 .camera {
@@ -28,6 +53,7 @@
     height: 633px;
     width: 782px;
     margin: auto; 
+    margin-bottom: 150px;
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -39,7 +65,7 @@
     border-radius: 11px;
     height: 447px;
     width: 627px;
-    margin-top: 60px;
+    margin-top: 70px;
     /* margin: auto; */
 }
 
@@ -47,9 +73,9 @@
     height: 82px;
     width: 82px;
     border-radius: 50%;
-    margin: 25px 0px;
+    margin: 20px 0px;
     /*font-family: "Manrope", sans-serif;*/
     background-color: #26662B;
-    color: white;
+    color: #CEFFBE;
     border: 5px solid #64A669;
 }
